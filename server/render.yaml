@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: taskflow-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        fromService:
+          type: pserv
+          name: mongodb
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: JWT_REFRESH_EXPIRES_IN
+        value: 30d
+      - key: CLIENT_URL
+        value: https://taskflow-sagar.vercel.app
+      - key: BCRYPT_ROUNDS
+        value: 12
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: COOKIE_EXPIRES_IN
+        value: 7
+    healthCheckPath: /

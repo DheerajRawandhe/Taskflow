@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- Primary Meta Tags -->
+    <title>TaskFlow </title>
+    <meta name="title" content="TaskFlow - Free Modern Task Management App | React Todo List 2025">
+    <meta name="description" content="TaskFlow is a beautiful, free task management application built with React, Node.js, and MongoDB. Organize tasks, boost productivity, and collaborate with teams. No premium plans, 100% free forever.">
+    <meta name="keywords" content="task management, todo list, productivity app, react app, free task manager, project management, team collaboration, MERN stack, task organizer, daily planner">
+    <meta name="author" content="Sagar Suryakant Waghmare">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Viewport and Device Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1f2937">
+    <meta name="color-scheme" content="dark light">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taskflow-sagar.vercel.app/">
+    <meta property="og:title" content="TaskFlow - Free Modern Task Management App | React Todo List 2025">
+    <meta property="og:description" content="TaskFlow is a beautiful, free task management application built with React, Node.js, and MongoDB. Organize tasks, boost productivity, and collaborate with teams. No premium plans, 100% free forever.">
+    <meta property="og:image" content="https://taskflow-sagar.vercel.app/og-image.png">
+    <meta property="og:site_name" content="TaskFlow">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://taskflow-sagar.vercel.app/">
+    <meta property="twitter:title" content="TaskFlow - Free Modern Task Management App | React Todo List 2025">
+    <meta property="twitter:description" content="TaskFlow is a beautiful, free task management application built with React, Node.js, and MongoDB. Organize tasks, boost productivity, and collaborate with teams. No premium plans, 100% free forever.">
+    <meta property="twitter:image" content="https://taskflow-sagar.vercel.app/og-image.png">
+    <meta property="twitter:creator" content="@SagarWaghmare">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/favicon-16x16.svg">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://taskflow-sagar.vercel.app/">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "TaskFlow",
+      "description": "A beautiful, free task management application built with React, Node.js, and MongoDB. Organize tasks, boost productivity, and collaborate with teams.",
+      "url": "https://taskflow-sagar.vercel.app/",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Sagar Suryakant Waghmare",
+        "url": "https://github.com/SagarSuryakantWaghmare"
+      },
+      "datePublished": "2024",
+      "keywords": "task management, todo list, productivity app, react app, free task manager, project management, team collaboration, MERN stack",
+      "screenshot": "https://taskflow-sagar.vercel.app/og-image.png",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150"
+      }
+    }
+    </script>
+    
+    <!-- Alternative Languages (if you plan to add them) -->
+    <link rel="alternate" hreflang="en" href="https://taskflow-sagar.vercel.app/">
+    
+    <!-- Performance and Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="origin-when-cross-origin">
+  </head>
+  <body>
+    <!-- Loading Screen with Animated Logo -->
+    <div id="loading-screen" style="
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); 
+      display: flex; 
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center; 
+      z-index: 9999;
+      transition: opacity 0.5s ease-out;
+    ">
+      <!-- TaskFlow Logo with Animation -->
+      <div style="
+        width: 80px; 
+        height: 80px; 
+        margin-bottom: 24px;
+        animation: logoFloat 2s ease-in-out infinite;
+      ">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="40" cy="40" r="38" fill="url(#logoGradient)" stroke="#1e40af" stroke-width="2"/>
+          <circle cx="40" cy="40" r="33" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <!-- Letter T -->
+          <rect x="20" y="25" width="40" height="6" fill="white"/>
+          <rect x="37" y="25" width="6" height="30" fill="white"/>
+          <!-- Letter F -->
+          <rect x="20" y="60" width="30" height="4" fill="white"/>
+          <rect x="20" y="52" width="22" height="4" fill="white"/>
+          <rect x="20" y="44" width="14" height="4" fill="white"/>
+        </svg>
+      </div>
+      
+      <!-- Loading Spinner -->
+      <div style="
+        width: 40px; 
+        height: 40px; 
+        margin-bottom: 16px;
+        border: 3px solid rgba(59, 130, 246, 0.2);
+        border-top: 3px solid #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      "></div>
+      
+      <!-- Loading Text -->
+      <div style="
+        color: #3b82f6; 
+        font-size: 18px; 
+        font-weight: 600; 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        margin-bottom: 8px;
+        animation: pulse 2s ease-in-out infinite;
+      ">Loading TaskFlow</div>
+      
+      <!-- Subtitle -->
+      <div style="
+        color: rgba(59, 130, 246, 0.7); 
+        font-size: 14px; 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        text-align: center;
+      ">Modern Task Management</div>
+      
+      <!-- Progress Dots -->
+      <div style="
+        display: flex; 
+        gap: 8px; 
+        margin-top: 24px;
+      ">
+        <div style="
+          width: 8px; 
+          height: 8px; 
+          background: #3b82f6; 
+          border-radius: 50%;
+          animation: dotPulse 1.5s ease-in-out infinite;
+        "></div>
+        <div style="
+          width: 8px; 
+          height: 8px; 
+          background: #3b82f6; 
+          border-radius: 50%;
+          animation: dotPulse 1.5s ease-in-out infinite 0.2s;
+        "></div>
+        <div style="
+          width: 8px; 
+          height: 8px; 
+          background: #3b82f6; 
+          border-radius: 50%;
+          animation: dotPulse 1.5s ease-in-out infinite 0.4s;
+        "></div>
+      </div>
+    </div>
+    
+    <!-- Keyframe Animations -->
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      @keyframes logoFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.6; }
+      }
+      
+      @keyframes dotPulse {
+        0%, 100% { 
+          opacity: 0.4; 
+          transform: scale(1); 
+        }
+        50% { 
+          opacity: 1; 
+          transform: scale(1.2); 
+        }
+      }
+      
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+    </style>
+    
+    <!-- Main App Container -->
+    <div id="root"></div>
+    
+    <!-- No Script Fallback -->
+    <noscript>
+      <div style="text-align: center; padding: 50px; background: #000; color: #fff;">
+        <h1>TaskFlow - Task Management App</h1>
+        <p>This application requires JavaScript to run. Please enable JavaScript in your browser.</p>
+        <p>TaskFlow is a modern task management application that helps you organize tasks and boost productivity.</p>
+      </div>
+    </noscript>
+    
+    <!-- Main Application Script -->
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Hide Loading Screen with Fade Effect -->
+    <script>
+      window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+          // Add fade out animation
+          loadingScreen.style.animation = 'fadeOut 0.5s ease-out forwards';
+          // Remove element after animation completes
+          setTimeout(() => {
+            loadingScreen.remove();
+          }, 500);
+        }
+      });
+      
+      // Also hide loading screen when React app mounts (fallback)
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(() => {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen && loadingScreen.style.display !== 'none') {
+            loadingScreen.style.animation = 'fadeOut 0.5s ease-out forwards';
+            setTimeout(() => {
+              if (loadingScreen.parentNode) {
+                loadingScreen.remove();
+              }
+            }, 500);
+          }
+        }, 3000); // Hide after 3 seconds maximum
+      });
+    </script>
+  </body>
+</html>
